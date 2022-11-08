@@ -10,29 +10,60 @@
 </head>
 <body>
 
-  Bill
+  <div class="container">
+    <h1>Spli<br>tter</h1>
+    <div class="white-wrapper">
+      <div class="inputs-wrapper">
+        <!-- BILL WRAPPER -->
+        <div class="bill">
+          <p class="text-gray">Bill</p>
+          <!-- zistit ako doň dať obrazok !!! -->
+          <input type="text" id="bill" readonly> 
+        </div>
+        <!-- SELECT A TIP -->
+        <div class="select-tip">
+          <p class="text-gray">Select Tip %</p>
+          <div class="tip-btns">
+            <button class="tip">5%</button>
+            <button class="tip">10%</button>
+            <button class="tip">15%</button>
+            <button class="tip">25%</button>
+            <button class="tip">50%</button>
+            <button class="tip">Custom</button>
+          </div>
+        </div>
+        <!-- NUMBER OF PEOPLE -->
+        <div class="num-of-people">
+          <p class="text-gray">Number of People</p>
+          <input type="text" id="num-of-people" readonly>
+        </div>
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">StevoP</a>.
+      <!-- FINAL INFO -->
+      <div class="info-wrapper">
+        <!-- TIP AMOUNT -->
+        <div class="tip-amount-wrapper">
+          <div class="tip-amount">
+            <span class="text-white">Tip Amount</span>
+            <span class="text-gray-small">/ person</span>
+          </div>
+          <span class="tip-amount-num"></span>
+        </div>
+        <!-- TOTAL AMOUNT WRAPPER -->
+        <div class="total-amount-wrapper">
+          <div class="total-amount">
+            <span class="text white">Total</span>
+            <span class="text-gray-small">/ person</span>
+          </div>
+        </div>
+        <button class="reset-btn">Reset</button>
+      </div>
+      <!-- ATTRIBUTION -->
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.github.com/stevop/" target="_blank">StevoP</a>.
+      </div>
+    </div>
   </div>
 </body>
 </html>
