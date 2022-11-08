@@ -4,15 +4,195 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $light-grayish-cyan;
     font-family: 'Space Mono', monospace;
+    
+    .container{
+        max-width: 375px;
+        h1{
+            color: $dark-grayish-cyan;
+            letter-spacing: .25em;
+            margin: 1em 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .white-wrapper{
+            background-color: $white;
+            border-radius: 20px 20px 0 0;
+            .inputs-wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                padding: 2em;
+
+                .bill{
+                    margin-bottom: $spacer;
+                    width: 100%;
+
+                    input{
+                        background-color: $very-light-grayish-cyan;
+                        background-image: url(../images/icon-dollar.svg);
+                        background-position: left center;
+                        background-repeat: no-repeat;
+                        border: none;
+                        border-radius: 5px;
+                        font-family: inherit;
+                        font-size: 24px;
+                        margin-top: .5em;
+                        outline: none;
+                        padding: .3em 0;
+                        text-align: right;
+                        width: 100%;
+                    }
+                }
+
+                .select-tip{
+                    margin-bottom: $spacer;
+                    width: 100%;
+
+                    .tip-btns{
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: .625em;
+
+                        margin-top: .5em;
+
+                        .tip{
+                            background-color: $very-dark-cyan;
+                            border: none;
+                            border-radius: 5px;
+                            color: $white;
+                            cursor: pointer;
+                            font-family: inherit;
+                            font-size: 24px;
+                            outline: none;
+                            padding: .3em 0;
+                            transition: all 250ms ease-in-out;
+
+                            &:last-of-type{
+                                background-color: $white;
+                                color: $dark-grayish-cyan;
+                            }
+
+                            &:hover, &:focus{
+                                background-color: $strong-cyan;
+                                color: $very-dark-cyan;
+                            }
+                        }
+                    }
+                }
+
+                .num-of-people{
+                    width: 100%;
+
+                    input{
+                        background-color: $very-light-grayish-cyan;
+                        background-image: url(../images/icon-person.svg);
+                        background-position: left center;
+                        background-repeat: no-repeat;
+                        border: none;
+                        border-radius: 5px;
+                        font-family: inherit;
+                        font-size: 24px;
+                        margin-top: .5em;
+                        outline: none;
+                        padding: .3em 0;
+                        text-align: right;
+                        width: 100%;
+                    }
+                }
+
+                // TEXT COLORS
+                .text-gray{
+                    color: $dark-grayish-cyan;
+                }
+            }
+        }
+        // INFO WRAPPER
+        .info-wrapper{
+            background-color: $very-dark-cyan;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            padding: 2em;
+
+            .tip-amount-wrapper{
+                display: flex;
+                justify-content: space-between;
+
+                margin-bottom: $spacer;
+                width: 100%;
+
+                .tip-amount{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .tip-amount-num{
+                    color: $strong-cyan;
+                    font-size: 24px;
+                }
+            }
+
+            .total-amount-wrapper{
+                display: flex;
+                justify-content: space-between;
+
+                margin-bottom: $spacer;
+                width: 100%;
+
+                .total-amount{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .total-amount-num{
+                    color: $strong-cyan;
+                    font-size: 24px;
+                }
+            }
+            .reset-btn{
+                color: $very-dark-cyan;
+                background-color: $strong-cyan;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: inherit;
+                font-size: 24px;
+                outline: none;
+                padding: .3em 0;
+                text-transform: uppercase;
+                width: 100%;
+            }
+
+            // TEXT COLORS
+            .text-gray-small{
+                color: $dark-grayish-cyan;
+                font-size: .8em;
+            }
+            
+            .text-white{
+                color: $white;
+            }
+
+        }
+    }
 }
 
 // ATTRIBUTION:
 .attribution { 
-    font-size: 11px; 
+    font-size: .675em; 
     text-align: center;
 
-    &:a{
-        color: hsl(228, 45%, 44%);
+    & a{
+        color: $very-dark-cyan;
     }
 }
