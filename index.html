@@ -1,72 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/style.css">
-  <title>Tip calculator app</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+		<link
+			rel="stylesheet"
+			href="./styles/style.css" />
+		<title>Tip calculator app</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Spli<br />tter</h1>
+			<div class="white-wrapper">
+				<div class="inputs-wrapper">
+					<!-- BILL WRAPPER -->
+					<div class="bill">
+						<p class="text-gray">Bill</p>
+						<!-- zistit ako doň dať obrazok !!! -->
+						<!-- dat inputu background? -->
+						<input
+							type="text"
+							id="bill"
+							value="0"
+							readonly />
+					</div>
+					<!-- SELECT A TIP -->
+					<div class="select-tip">
+						<p class="text-gray">Select Tip %</p>
+						<div class="tip-btns">
+							<button class="tip tip5">5%</button>
+							<button class="tip tip10">10%</button>
+							<button class="tip tip15">15%</button>
+							<button class="tip tip25">25%</button>
+							<button class="tip tip50">50%</button>
+							<button class="tip custom">Custom</button>
+						</div>
+					</div>
+					<!-- NUMBER OF PEOPLE -->
+					<div class="num-of-people">
+						<p class="text-gray">Number of People</p>
+						<input
+							type="text"
+							id="num-of-people"
+							value="1"
+							readonly />
+					</div>
+				</div>
 
-</head>
-<body>
-  <div class="container">
-    <h1>Spli<br>tter</h1>
-    <div class="white-wrapper">
-      <div class="inputs-wrapper">
-        <!-- BILL WRAPPER -->
-        <div class="bill">
-          <p class="text-gray">Bill</p>
-          <!-- zistit ako doň dať obrazok !!! -->
-          <!-- dat inputu background? -->
-          <input type="text" id="bill" value="0" readonly> 
-        </div>
-        <!-- SELECT A TIP -->
-        <div class="select-tip">
-          <p class="text-gray">Select Tip %</p>
-          <div class="tip-btns">
-            <button class="tip tip5">5%</button>
-            <button class="tip tip10">10%</button>
-            <button class="tip tip15">15%</button>
-            <button class="tip tip25">25%</button>
-            <button class="tip tip50">50%</button>
-            <button class="tip custom">Custom</button>
-          </div>
-        </div>
-        <!-- NUMBER OF PEOPLE -->
-        <div class="num-of-people">
-          <p class="text-gray">Number of People</p>
-          <input type="text" id="num-of-people" value="1" readonly>
-        </div>
-      </div>
+				<!-- FINAL INFO -->
+				<div class="info-wrapper">
+					<!-- TIP AMOUNT -->
+					<div class="tip-amount-wrapper">
+						<div class="tip-amount">
+							<span class="text-white">Tip Amount</span>
+							<span class="text-gray-small">/ person</span>
+						</div>
+						<span class="tip-amount-num">$0.00</span>
+					</div>
+					<!-- TOTAL AMOUNT WRAPPER -->
+					<div class="total-amount-wrapper">
+						<div class="total-amount">
+							<span class="text-white">Total</span>
+							<span class="text-gray-small">/ person</span>
+						</div>
+						<span class="total-amount-num">$0.00</span>
+					</div>
+					<button class="reset-btn">Reset</button>
+				</div>
+			</div>
+		</div>
 
-      <!-- FINAL INFO -->
-      <div class="info-wrapper">
-        <!-- TIP AMOUNT -->
-        <div class="tip-amount-wrapper">
-          <div class="tip-amount">
-            <span class="text-white">Tip Amount</span>
-            <span class="text-gray-small">/ person</span>
-          </div>
-          <span class="tip-amount-num">$0.00</span>
-        </div>
-        <!-- TOTAL AMOUNT WRAPPER -->
-        <div class="total-amount-wrapper">
-          <div class="total-amount">
-            <span class="text-white">Total</span>
-            <span class="text-gray-small">/ person</span>
-          </div>
-          <span class="total-amount-num">$0.00</span>
-        </div>
-        <button class="reset-btn">Reset</button>
-      </div>
-    </div>
-  </div>
-  
-  <!-- ATTRIBUTION -->
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.github.com/stevop/" target="_blank">StevoP</a>.
-  </div>
-  <script src="./src/app.js"></script>
-</body>
+		<!-- ATTRIBUTION -->
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a
+				href="https://www.github.com/stevop/"
+				target="_blank"
+				>StevoP</a
+			>.
+		</div>
+		<script src="./src/app.js"></script>
+	</body>
 </html>
