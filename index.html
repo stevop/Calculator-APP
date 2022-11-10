@@ -40,14 +40,16 @@
 							<button class="tip tip15">15%</button>
 							<button class="tip tip25">25%</button>
 							<button class="tip tip50">50%</button>
-							<button class="tip custom">Custom</button>
+							<button class="tip custom">Custom %</button>
 						</div>
 					</div>
 					<!-- NUMBER OF PEOPLE -->
 					<div class="num-of-people">
 						<p class="text-gray">Number of People</p>
 						<input
-							type="text"
+							type="number"
+							min="1"
+							max="150"
 							id="num-of-people"
 							value="1"
 							readonly />
@@ -91,6 +93,7 @@
 				>StevoP</a
 			>.
 		</div>
-		<script src="./src/app.js"></script>
+		<script src="./dist/tips.js"></script>
+		<script src="./dist/app.js"></script>
 	</body>
 </html>

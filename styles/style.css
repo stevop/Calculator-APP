@@ -103,7 +103,7 @@ body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip:last-o
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(186deg, 14%, 43%);
 }
-body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip:hover, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip:focus {
+body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip:hover, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip:focus, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip:active {
   background-color: hsl(172deg, 67%, 45%);
   color: hsl(183deg, 100%, 15%);
 }
