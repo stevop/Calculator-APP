@@ -1,5 +1,5 @@
-const billInput = document.getElementById("bill")
-const peopleInput = document.getElementById("num-of-people")
+const billInput: any = document.getElementById("bill")
+const peopleInput: any = document.getElementById("num-of-people")
 const reset = document.querySelector(".reset-btn")
 
 const tip5percent = document.querySelector(".tip5")
@@ -7,15 +7,17 @@ const tip10percent = document.querySelector(".tip10")
 const tip15percent = document.querySelector(".tip15")
 const tip25percent = document.querySelector(".tip25")
 const tip50percent = document.querySelector(".tip50")
-const tipCustom = document.querySelector(".custom")
 
-const tipAmount = document.querySelector(".tip-amount-num")
-const totalAmount = document.querySelector(".total-amount-num")
+const tipAmount: any = document.querySelector(".tip-amount-num")
+const totalAmount: any = document.querySelector(".total-amount-num")
+
+let totalAmountNum: number = totalAmount.textContent
 
 // BILL INPUT
+let billNum: number
 billInput?.addEventListener("click", () => {
 	billInput.removeAttribute("readonly")
-	billInput.addEventListener("keyup", (e) => {
+	billInput.addEventListener("keyup", (e: any) => {
 		if (
 			(e.keyCode <= 57 && e.keyCode >= 48) ||
 			e.keyCode === 16 ||
@@ -23,11 +25,11 @@ billInput?.addEventListener("click", () => {
 			e.keyCode === 46
 		) {
 			// mozno pridat ctrl + v
-			// console.log("spravny charcode")
 			billInput.style.border = "none"
-			totalAmount?.textContent = `$${billInput.value}`
+			billNum = parseFloat(billInput.value)
+			totalAmountNum = billNum / peopleInput.value
+			totalAmount.textContent = `$${totalAmountNum}`
 		} else {
-			// billInput.value = "Must type numbers!"
 			billInput.style.border = "2px red solid"
 		}
 	})
@@ -36,7 +38,7 @@ billInput?.addEventListener("click", () => {
 // PEOPLE INPUT
 peopleInput?.addEventListener("click", () => {
 	peopleInput.removeAttribute("readonly")
-	peopleInput.addEventListener("keyup", (e) => {
+	peopleInput.addEventListener("keyup", (e: any) => {
 		if (
 			(e.keyCode <= 57 && e.keyCode >= 48) ||
 			e.keyCode === 16 ||
@@ -44,11 +46,8 @@ peopleInput?.addEventListener("click", () => {
 			e.keyCode === 46
 		) {
 			peopleInput.style.border = "none"
-			// totalAmount?.textContent = parseInt(totalAmount?.textContent?.slice(1)) / parseInt(peopleInput.value);
-			// console.log(totalAmount);
-			// return
+
 		} else {
-			// billInput.value = "Must type numbers!"
 			peopleInput.style.border = "2px red solid"
 		}
 	})
@@ -56,7 +55,23 @@ peopleInput?.addEventListener("click", () => {
 
 // TIPPING BUTTONS - cez costructructor!
 tip5percent?.addEventListener("click", () => {
-	tipAmount?.textContent = `$${
-		(parseInt(billInput?.value) * 0.05) / peopleInput?.value
-	}`
+	tip(0.05)
 })
+tip10percent?.addEventListener("click", () => {
+	tip(0.1)
+})
+tip15percent?.addEventListener("click", () => {
+	tip(0.15)
+})
+tip25percent?.addEventListener("click", () => {
+	tip(0.25)
+})
+tip50percent?.addEventListener("click", () => {
+	tip(0.5)
+})
+
+// TOTAL AMOUNT TO PAY
+
+billNum = parseFloat(billInput.value)
+totalAmountNum = totalTip + (billNum / peopleInput.value)
+totalAmount.textContent = `$${totalAmountNum}`
