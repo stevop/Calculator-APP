@@ -32,8 +32,9 @@ reset?.addEventListener("click", resetValues);
 tipBtn.forEach((btn) => {
 	btn.addEventListener("click", () => {
 		tipPerPerson!.textContent =
-			"$" +
-			(billInput.value * (parseFloat(btn.innerHTML) / 100));
+			"$" + billInput.value * (parseFloat(btn.innerHTML) / 100);
 		updateTotal();
 	});
 });
+
+// spravit button na custom tip, ale treba ho urobit u inputu

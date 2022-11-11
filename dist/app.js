@@ -27,8 +27,7 @@ reset === null || reset === void 0 ? void 0 : reset.addEventListener("click", re
 tipBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
         tipPerPerson.textContent =
-            "$" +
-                (billInput.value * (parseFloat(btn.innerHTML) / 100));
+            "$" + billInput.value * (parseFloat(btn.innerHTML) / 100);
         updateTotal();
     });
 });
