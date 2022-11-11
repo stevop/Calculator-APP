@@ -21,12 +21,14 @@ function resetValues() {
     peopleInput.value = 1;
     updateTotal();
 }
+billInput.addEventListener("input", updateTotal);
+peopleInput.addEventListener("input", updateTotal);
 reset === null || reset === void 0 ? void 0 : reset.addEventListener("click", resetValues);
 tipBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
         tipPerPerson.textContent =
             "$" +
-                (billInput.value * (parseFloat(btn.innerHTML) / 100)) / peopleInput.value;
+                (billInput.value * (parseFloat(btn.innerHTML) / 100));
         updateTotal();
     });
 });

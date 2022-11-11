@@ -25,13 +25,15 @@ function resetValues() {
 	updateTotal();
 }
 
+billInput.addEventListener("input", updateTotal);
+peopleInput.addEventListener("input", updateTotal);
 reset?.addEventListener("click", resetValues);
 
 tipBtn.forEach((btn) => {
 	btn.addEventListener("click", () => {
 		tipPerPerson!.textContent =
 			"$" +
-			(billInput.value * (parseFloat(btn.innerHTML) / 100)) / peopleInput.value;
+			(billInput.value * (parseFloat(btn.innerHTML) / 100));
 		updateTotal();
 	});
 });
