@@ -97,7 +97,7 @@ body {
 
 						margin-top: 0.5em;
 
-						.tip {
+						.tip, .custom-tip {
 							background-color: $very-dark-cyan;
 							border: none;
 							border-radius: 5px;
@@ -115,40 +115,42 @@ body {
 								padding: 0;
 							}
 
-							
 							input {
 								background-color: $white;
 								border: none;
+								border-radius: 5px;
+								color: $very-dark-cyan;
 								font-family: inherit;
+								font-size: inherit;
 								height: 100%;
 								outline: none;
+								width: 100%;
 
-								&:active, &:hover, &:focus{
+								&:active,
+								&:hover,
+								&:focus {
 									background-color: $strong-cyan;
 								}
 
-								&::-webkit-input-placeholder{
-									
+								&::-webkit-input-placeholder {
 									text-align: center;
 								}
 
-								&::-moz-placeholder{
+								&::-moz-placeholder {
 									text-align: center;
 								}
 
-								&:-ms-input-placeholder{
+								&:-ms-input-placeholder {
 									text-align: center;
 								}
 
-								&::-ms-input-placeholder{
+								&::-ms-input-placeholder {
 									text-align: center;
 								}
 
-								&::placeholder{
-									font-size: 24px;
+								&::placeholder {
 									text-align: center;
 								}
-								
 							}
 						}
 					}

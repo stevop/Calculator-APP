@@ -90,7 +90,7 @@ body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns {
   gap: 0.625em;
   margin-top: 0.5em;
 }
-body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip {
+body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip {
   background-color: hsl(183deg, 100%, 15%);
   border: none;
   border-radius: 5px;
@@ -102,29 +102,32 @@ body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip {
   padding: 0.3em 0;
   transition: all 250ms ease-in-out;
 }
-body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip:last-of-type {
+body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip:last-of-type, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip:last-of-type {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(186deg, 14%, 43%);
   padding: 0;
 }
-body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input {
+body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip input {
   background-color: hsl(0deg, 0%, 100%);
   border: none;
+  border-radius: 5px;
+  color: hsl(183deg, 100%, 15%);
   font-family: inherit;
+  font-size: inherit;
   height: 100%;
   outline: none;
+  width: 100%;
 }
-body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input:active, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input:hover, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input:focus {
+body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input:active, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input:hover, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input:focus, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip input:active, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip input:hover, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip input:focus {
   background-color: hsl(172deg, 67%, 45%);
 }
-body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input::-moz-placeholder {
+body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input::-moz-placeholder, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip input::-moz-placeholder {
   text-align: center;
 }
-body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input:-ms-input-placeholder {
+body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input:-ms-input-placeholder, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip input:-ms-input-placeholder {
   text-align: center;
 }
-body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input::placeholder {
-  font-size: 24px;
+body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .tip input::placeholder, body .container .white-wrapper .inputs-wrapper .select-tip .tip-btns .custom-tip input::placeholder {
   text-align: center;
 }
 body .container .white-wrapper .inputs-wrapper .num-of-people {

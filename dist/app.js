@@ -8,6 +8,7 @@ const tip10percent = document.querySelector(".tip10");
 const tip15percent = document.querySelector(".tip15");
 const tip25percent = document.querySelector(".tip25");
 const tip50percent = document.querySelector(".tip50");
+const tipCustom = document.querySelector(".custom-tip");
 const tipPerPerson = document.querySelector(".tip-amount-num");
 const totalPerPerson = document.querySelector(".total-amount-num");
 function updateTotal() {
