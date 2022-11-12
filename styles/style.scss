@@ -112,13 +112,43 @@ body {
 							&:last-of-type {
 								background-color: $white;
 								color: $dark-grayish-cyan;
+								padding: 0;
 							}
 
-							&:hover,
-							&:focus,
-							&:active {
-								background-color: $strong-cyan;
-								color: $very-dark-cyan;
+							
+							input {
+								background-color: $white;
+								border: none;
+								font-family: inherit;
+								height: 100%;
+								outline: none;
+
+								&:active, &:hover, &:focus{
+									background-color: $strong-cyan;
+								}
+
+								&::-webkit-input-placeholder{
+									
+									text-align: center;
+								}
+
+								&::-moz-placeholder{
+									text-align: center;
+								}
+
+								&:-ms-input-placeholder{
+									text-align: center;
+								}
+
+								&::-ms-input-placeholder{
+									text-align: center;
+								}
+
+								&::placeholder{
+									font-size: 24px;
+									text-align: center;
+								}
+								
 							}
 						}
 					}
