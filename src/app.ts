@@ -2,13 +2,14 @@ const billInput: any = document.getElementById("bill");
 const peopleInput: any = document.getElementById("num-of-people");
 const reset = document.querySelector(".reset-btn");
 
-let tipBtn = document.querySelectorAll(".tip");
+const tipBtn = document.querySelectorAll(".tip");
 const tip5percent = document.querySelector(".tip5");
 const tip10percent = document.querySelector(".tip10");
 const tip15percent = document.querySelector(".tip15");
 const tip25percent = document.querySelector(".tip25");
 const tip50percent = document.querySelector(".tip50");
 const tipCustom = document.querySelector(".custom-tip");
+const customInput = document.getElementById("custom-input");
 
 const tipPerPerson = document.querySelector(".tip-amount-num");
 const totalPerPerson: any = document.querySelector(".total-amount-num");
@@ -23,7 +24,7 @@ function updateTotal() {
 function resetValues() {
 	billInput.value = 0;
 	peopleInput.value = 1;
-	tipPerPerson!.textContent = `$${0.00}`
+	tipPerPerson!.textContent = `$${0.0}`;
 	updateTotal();
 }
 
@@ -33,10 +34,16 @@ reset!.addEventListener("click", resetValues);
 
 tipBtn.forEach((btn) => {
 	btn.addEventListener("click", () => {
+		tipPerPerson!.textContent = `$${0.0}`;
 		tipPerPerson!.textContent =
 			"$" + billInput.value * (parseFloat(btn.innerHTML) / 100);
 		updateTotal();
 	});
 });
 
-// spravit button na custom tip, ale treba ho urobit u inputu
+// CUSTOM BTN
+customInput?.addEventListener("input", (e) => {
+	tipPerPerson!.textContent = `$${0.0}`;
+	tipPerPerson!.textContent = "$" + (billInput.value * e.target.value) / 100;
+	updateTotal();
+});
