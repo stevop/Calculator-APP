@@ -20,11 +20,12 @@ function updateTotal() {
 function resetValues() {
     billInput.value = 0;
     peopleInput.value = 1;
+    tipPerPerson.textContent = `$${0.00}`;
     updateTotal();
 }
 billInput.addEventListener("input", updateTotal);
 peopleInput.addEventListener("input", updateTotal);
-reset === null || reset === void 0 ? void 0 : reset.addEventListener("click", resetValues);
+reset.addEventListener("click", resetValues);
 tipBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
         tipPerPerson.textContent =
