@@ -24,8 +24,24 @@ function resetValues() {
     tipPerPerson.textContent = `$${0.0}`;
     updateTotal();
 }
-billInput.addEventListener("input", updateTotal);
-peopleInput.addEventListener("input", updateTotal);
+billInput.addEventListener("input", (e) => {
+    updateTotal();
+    if (parseFloat(e.target.value) <= 0) {
+        billInput.style.borderColor = "red";
+    }
+    else {
+        billInput.style.borderColor = "hsl(172, 67%, 45%)";
+    }
+});
+peopleInput.addEventListener("input", (e) => {
+    updateTotal();
+    if (parseFloat(e.target.value) <= 0) {
+        peopleInput.style.borderColor = "red";
+    }
+    else {
+        peopleInput.style.borderColor = "hsl(172, 67%, 45%)";
+    }
+});
 reset.addEventListener("click", resetValues);
 tipBtn.forEach((btn) => {
     btn.addEventListener("click", () => {

@@ -78,6 +78,7 @@ body .container .white-wrapper .inputs-wrapper .bill input {
   width: 100%;
 }
 body .container .white-wrapper .inputs-wrapper .bill input:active, body .container .white-wrapper .inputs-wrapper .bill input:focus {
+  border-color: hsl(172deg, 67%, 45%);
   color: hsl(183deg, 100%, 15%);
 }
 body .container .white-wrapper .inputs-wrapper .select-tip {
@@ -166,6 +167,7 @@ body .container .white-wrapper .inputs-wrapper .num-of-people input {
   width: 100%;
 }
 body .container .white-wrapper .inputs-wrapper .num-of-people input:active, body .container .white-wrapper .inputs-wrapper .num-of-people input:focus {
+  border-color: hsl(172deg, 67%, 45%);
   color: hsl(183deg, 100%, 15%);
 }
 body .container .white-wrapper .inputs-wrapper .text-gray {

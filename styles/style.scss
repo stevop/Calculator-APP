@@ -81,6 +81,7 @@ body {
 
 						&:active,
 						&:focus {
+							border-color: $strong-cyan;
 							color: $very-dark-cyan;
 						}
 					}
@@ -179,6 +180,7 @@ body {
 
 						&:active,
 						&:focus {
+							border-color: $strong-cyan;
 							color: $very-dark-cyan;
 						}
 					}

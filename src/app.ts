@@ -12,24 +12,38 @@ const tipCustom = document.querySelector(".custom-tip");
 const customInput = document.getElementById("custom-input");
 
 const tipPerPerson = document.querySelector(".tip-amount-num");
-const totalPerPerson: any = document.querySelector(".total-amount-num");
+const totalPerPerson = document.querySelector(".total-amount-num");
 
-function updateTotal() {
+function updateTotal(): void {
 	let billValue = parseFloat(billInput.value);
 	let tipValue = parseFloat(tipPerPerson!.innerHTML.slice(1));
 	let peopleValue = peopleInput.value;
 	totalPerPerson!.textContent = `$${(billValue + tipValue) / peopleValue}`;
 }
 
-function resetValues() {
+function resetValues(): void {
 	billInput.value = 0;
 	peopleInput.value = 1;
 	tipPerPerson!.textContent = `$${0.0}`;
 	updateTotal();
 }
 
-billInput.addEventListener("input", updateTotal);
-peopleInput.addEventListener("input", updateTotal);
+billInput.addEventListener("input", (e) => {
+	updateTotal();
+	if (parseFloat(e.target.value) <= 0) {
+		billInput.style.borderColor = "red";
+	} else {
+		billInput.style.borderColor = "hsl(172, 67%, 45%)";
+	}
+});
+peopleInput.addEventListener("input", (e) => {
+	updateTotal();
+	if(parseFloat(e.target.value) <= 0){
+		peopleInput.style.borderColor = "red";
+	} else {
+		peopleInput.style.borderColor = "hsl(172, 67%, 45%)";
+	}
+});
 reset!.addEventListener("click", resetValues);
 
 tipBtn.forEach((btn) => {
